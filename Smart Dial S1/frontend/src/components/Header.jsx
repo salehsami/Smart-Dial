@@ -27,6 +27,7 @@ function Header() {
               <FaSignOutAlt /> Logout
             </button>
           </li>
+          
         ) : (
           <>
             <li>
@@ -39,12 +40,6 @@ function Header() {
                 <FaUser /> Employee
               </Link>
               </li>
-              
-            <li>
-              <Link to='/registerEmp'>
-                <FaUser /> RegEmployee
-              </Link>
-            </li>
           </>
         )}
       </ul>

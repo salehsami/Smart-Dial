@@ -29,7 +29,8 @@ function RegisterEmployee() {
     }
 
     if (isSuccess || user) {
-      navigate('/')
+      toast("Employee Registered Successfully")
+      navigate('/adminHome')
     }
 
     dispatch(reset())

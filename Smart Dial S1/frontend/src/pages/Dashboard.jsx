@@ -21,7 +21,7 @@ function Dashboard() {
     }
 
     if (!user) {
-      navigate('/loginAdm')
+      navigate('/home')
     }
 
     dispatch(getGoals())

@@ -27,7 +27,7 @@ function AdminLogin() {
     }
 
     if (isSuccess || user) {
-      navigate('/')
+      navigate('/adminHome')
     }
 
     dispatch(reset())
