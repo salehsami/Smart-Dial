@@ -6,7 +6,7 @@ import { FaUser } from 'react-icons/fa'
 import { register, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
 
-function Register() {
+function RegisterEmployee() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -64,7 +64,7 @@ function Register() {
   return (
     <>
       <section className="heading">
-        <h1><FaUser />Register</h1>
+        <h1><FaUser /></h1><h1> Employee Registeration </h1>
         <p>Please Create an Account</p>
       </section>
       <section className="form">
@@ -76,7 +76,7 @@ function Register() {
                 id="name"
                 name="name"
                 value={name}
-                placeholder="Enter your Good Name"
+                placeholder="Enter Employee's Good Name"
                 onChange={onChange}/>
           </div>
           
@@ -98,7 +98,7 @@ function Register() {
                 id="password"
                 name="password"
                 value={password}
-                placeholder="Enter Password"
+                placeholder="Add Password"
                 onChange={onChange}/>
           </div>
 
@@ -109,11 +109,11 @@ function Register() {
                 id="password2"
                 name="password2"
                 value={password2}
-                placeholder="Confirm your Password"
+                placeholder="Confirm Employee's Password"
                 onChange={onChange}/>
           </div>
           <div className="form-group">
-            <button type = "submit" className="btn btn-block">Submit</button>
+            <button type = "submit" className="btn btn-block">Register</button>
           </div>
         </form>
       </section>
@@ -122,4 +122,4 @@ function Register() {
   )
 }
 
-export default Register
+export default RegisterEmployee
