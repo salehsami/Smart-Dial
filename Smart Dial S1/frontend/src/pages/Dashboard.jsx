@@ -21,7 +21,7 @@ function Dashboard() {
     }
 
     if (!user) {
-      navigate('/login')
+      navigate('/loginAdm')
     }
 
     dispatch(getGoals())
@@ -52,7 +52,7 @@ function Dashboard() {
             ))}
           </div>
         ) : (
-          <h3>You have not set any goals</h3>
+          <h3>You have not set any Customers</h3>
         )}
       </section>
     </>

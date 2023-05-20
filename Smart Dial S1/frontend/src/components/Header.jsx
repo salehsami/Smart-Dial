@@ -30,13 +30,19 @@ function Header() {
         ) : (
           <>
             <li>
-              <Link to='/login'>
-                <FaUser /> Employee
+              <Link to='/loginAdm'>
+                <FaUser /> Admin
               </Link>
             </li>
             <li>
-              <Link to='/register'>
-                <FaUser /> Admin
+              <Link to='/loginEmp'>
+                <FaUser /> Employee
+              </Link>
+              </li>
+              
+            <li>
+              <Link to='/registerEmp'>
+                <FaUser /> RegEmployee
               </Link>
             </li>
           </>

@@ -1,10 +1,12 @@
+require('dotenv').config({ path: './.env'})
+
+
 // console.log("complete part 1 before Zoahr prayer on 1-5-2023");
 const express = require("express")
 const colors = require('colors')
 // const dotenv = require("dotenv"); // not getting read 
 const { errorHandler } = require("./Middleware/errorMiddleware")
 const connectDB = require("./config/db")
-require('dotenv').config({ path: './.env'})
 
 
 // const port = 5000   we are adding this in environment variable of root

@@ -6,7 +6,7 @@ import { toast } from 'react-toastify'
 import { login, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
 
-function Login() {
+function EmployeeLogin() {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -58,8 +58,8 @@ function Login() {
   return (
     <>
       <section className="heading">
-        <h1><FaSignInAlt />Login</h1>
-        <p>Login to your Account</p>
+        <h1><FaSignInAlt /> Employee Portal</h1>
+        <p>Login to your Portal</p>
       </section>
       <section className="form">
         <form onSubmit={onSubmit}>
@@ -87,7 +87,7 @@ function Login() {
           </div>
 
           <div className="form-group">
-            <button type = "submit" className="btn btn-block">Submit</button>
+            <button type = "submit" className="btn btn-block">Login</button>
           </div>
         </form>
       </section>
@@ -96,4 +96,4 @@ function Login() {
   )
 }
 
-export default Login
+export default EmployeeLogin

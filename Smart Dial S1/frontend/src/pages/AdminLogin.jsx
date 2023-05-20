@@ -1,20 +1,18 @@
 import { useState, useEffect } from 'react'
+import { FaSignInAlt } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { FaUser } from 'react-icons/fa'
-import { register, reset } from '../features/auth/authSlice'
+import { login, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
 
-function RegisterEmployee() {
+function AdminLogin() {
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
     password: '',
-    password2: '',
   })
 
-  const { name, email, password, password2 } = formData
+  const { email, password } = formData
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -45,41 +43,27 @@ function RegisterEmployee() {
   const onSubmit = (e) => {
     e.preventDefault()
 
-    if (password !== password2) {
-      toast.error('Passwords do not match')
-    } else {
-      const userData = {
-        name,
-        email,
-        password,
-      }
-
-      dispatch(register(userData))
+    const userData = {
+      email,
+      password,
     }
+
+    dispatch(login(userData))
   }
 
   if (isLoading) {
     return <Spinner />
   }
+
   return (
     <>
       <section className="heading">
-        <h1><FaUser /></h1><h1> Employee Registeration </h1>
-        <p>Please Create an Account</p>
+        <h1><FaSignInAlt /> Admin Portal</h1>
+        <p>Login to your Portal</p>
       </section>
       <section className="form">
         <form onSubmit={onSubmit}>
-          <div className="form-group">
-            <input
-                type="text"
-                className="form-control"
-                id="name"
-                name="name"
-                value={name}
-                placeholder="Enter Employee's Good Name"
-                onChange={onChange}/>
-          </div>
-          
+                   
             <div className="form-group">
             <input
                 type="email"
@@ -87,7 +71,7 @@ function RegisterEmployee() {
                 id="email"
                 name="email"
                 value={email}
-                placeholder="Enter Email"
+                placeholder="Enter Your Email"
                 onChange={onChange}/>
           </div>
           
@@ -98,27 +82,18 @@ function RegisterEmployee() {
                 id="password"
                 name="password"
                 value={password}
-                placeholder="Add Password"
+                placeholder="Enter Password"
                 onChange={onChange}/>
           </div>
 
           <div className="form-group">
-            <input
-                type="password"
-                className="form-control"
-                id="password2"
-                name="password2"
-                value={password2}
-                placeholder="Confirm Employee's Password"
-                onChange={onChange}/>
-          </div>
-          <div className="form-group">
-            <button type = "submit" className="btn btn-block">Register</button>
+            <button type = "submit" className="btn btn-block">Login</button>
           </div>
         </form>
       </section>
+    
     </>
   )
 }
 
-export default RegisterEmployee
+export default AdminLogin
