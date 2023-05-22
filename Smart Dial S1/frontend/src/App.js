@@ -8,6 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import EmployeeLogin from "./pages/EmployeeLogin";
 import WelcomeScreen from "./pages/WelcomeScreen";
 import AdminHome from "./pages/AdminHome";
+import Dummy_helping_code from "./pages/Dummy_helping_code";
+import Dummy_helping_code2 from "./pages/Dummy_helping_code2";
 
 
 function App() {
@@ -23,6 +25,9 @@ function App() {
             <Route path="/adminHome" element={<AdminHome />} />
             <Route path="/loginEmp" element={<EmployeeLogin />} />
             <Route path="/registerEmp" element={<RegisterEmployee />} />
+            <Route path="/dum2" element={<Dummy_helping_code2 />} />
+            <Route path="/dum" element={<Dummy_helping_code/>} />
+            
           </Routes>
         </div>
       </Router>
