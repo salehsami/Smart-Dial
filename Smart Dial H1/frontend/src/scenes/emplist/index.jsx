@@ -3,7 +3,6 @@ import axios from "axios";
 import Header from "../../components/Header";
 import Side from "../global/Side";
 import Topbar from "../global/Topbar";
-
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { styled } from "@mui/system";
 import {
@@ -69,7 +68,6 @@ const Employee = () => {
   };
 
   return (
-    
        <div className="app">
       <Side isSide={isSide} />
       <main className="content">
